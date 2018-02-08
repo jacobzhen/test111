@@ -1,0 +1,103 @@
+import sys
+import random
+#from random import *
+#import traceback
+import pygame
+#from pygame.locals import *
+import time
+
+
+
+'''
+pygame.init()
+pygame.mixer.init()
+
+bg_size = width,height = 1200, 500
+
+
+screen = pygame.display.set_mode(bg_size)
+pygame.display.set_caption("Super number guessing")
+
+
+background1 = pygame.image.load("images/super.png").convert()
+background = pygame.image.load("images/frozen.png").convert()
+super2 = pygame.image.load("images/super2.png").convert_alpha()
+laugh = pygame.image.load("images/laugh.png").convert_alpha()
+laugh_rect = laugh.get_rect()
+
+
+
+pygame.mixer.music.load("sound/game_music.ogg")
+pygame.mixer.music.set_volume(0.2)
+begin_sound = pygame.mixer.Sound("sound/begin.wav")
+begin_sound.set_volume(0.2)
+nobingo_sound = pygame.mixer.Sound("sound/nobingo.wav")
+nobingo_sound.set_volume(0.2)
+bingo_sound = pygame.mixer.Sound("sound/bingo.wav")
+bingo_sound.set_volume(0.2)
+warning_sound = pygame.mixer.Sound("sound/warning.wav")
+warning_sound.set_volume(0.2)
+laugh_sound = pygame.mixer.Sound("sound/laugh.wav")
+laugh_sound.set_volume(0.2)
+'''
+
+
+
+#dice1 = 1
+#dice2 = 1
+#dice3 = 1
+
+
+#dice1 = 2
+#dice2 = 2
+#dice3 = 2
+
+while True:
+    dice_result = 0
+    dice1 = 2
+    dice2 = 2
+    dice3 = 2
+    #dice1 = random.randint(1,6)
+    #dice2 = random.randint(1,6)
+    #dice3 = random.randint(1,6)
+    bet = 10
+
+    dice_sum = dice1 + dice2 + dice3
+
+    if dice1 == dice2 and dice1 == dice3:
+        dice_result= '围骰'+str(dice1)
+        win = bet * 150
+
+        #if dice_sum <= 4 and dice_sum >= 10:
+    else:
+        if dice_sum <= 10:
+            dice_result = '小'
+            win = bet * 2
+    #elif (dice1 != dice2 or dice1 != dice3) and dice_sum <= 11 and dice_sum >= 17:
+        elif dice_sum >= 11:
+            dice_result = '大'
+            win = bet * 2
+
+
+
+    print(dice1,dice2,dice3)
+    print(dice_sum)
+    print(dice_result)
+    print(win)
+    time.sleep(1)
+
+
+
+'''
+if __name__=="__main__":
+    try:
+        preview()
+        time.sleep(3)
+        main()
+
+    except SystemExit:
+        pass
+    except:
+        traceback.print_exc()
+        pygame.quit()
+        input()'''
